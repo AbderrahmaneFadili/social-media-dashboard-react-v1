@@ -12,7 +12,9 @@ export const Card = styled.div`
   position: relative;
   border-top: 6px solid ${({ borderTopColor }) => borderTopColor};
   margin-bottom: 2rem;
+  cursor: pointer;
 
+  //Content after => for gradient border color
   &::after {
     position: absolute;
     top: -6px;
@@ -33,6 +35,24 @@ export const Card = styled.div`
     content: "";
     border-radius: 0.3rem 0.3rem 0 0;
     opacity: ${({ isBorderGradient }) => (isBorderGradient === true ? 1 : 0)};
+  }
+
+  //Content before => hover overlay
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${({ theme }) => theme.textSecondary};
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  //hover
+  &:hover::before {
+    opacity: 0.1;
   }
 
   /* Media for tablettes */
