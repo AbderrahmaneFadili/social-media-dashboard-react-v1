@@ -90,8 +90,8 @@ export const SocialUpDown = styled.div`
 
 //Arrow Icon
 export const ArrowIcon = styled.img`
-  width: 1rem;
-  height: 0.6rem;
+  width: 0.8rem;
+  height: 0.5rem;
 `;
 
 //Social Daily

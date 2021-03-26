@@ -24,17 +24,19 @@ export const Header = styled.div`
   }
 `;
 
+//Header Column
 export const HeaderCol = styled.div`
   flex: 1;
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
 
+  //child 1 of HeaderCol Element
   &:nth-child(1) {
     border-bottom: 1px solid ${({ theme }) => theme.textSecondary};
     padding-bottom: 3rem;
   }
-
+  //child 2 of HeaderCol Element
   &:nth-child(2) {
     justify-content: flex-end;
     flex-direction: row;
@@ -42,12 +44,14 @@ export const HeaderCol = styled.div`
     padding: 2rem 0;
   }
 
+  //Media for Mobile
   @media screen and (max-width: 768px) {
     &:nth-child(2) {
       justify-content: space-between;
     }
   }
 
+  //Media for Desktop
   @media screen and (min-width: 768px) {
     &:nth-child(1) {
       border-bottom: none;
@@ -80,4 +84,25 @@ export const DashboardCards = styled.div`
   justify-content: space-between;
   position: relative;
   top: -8rem;
+`;
+
+//Overview Cards
+export const OverviewCards = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -220px;
+`;
+
+//Overview Title
+export const OverviewTitle = styled.h1`
+  color: ${({ theme }) => theme.textSecondary};
+  margin-bottom: 2rem;
+`;
+
+//Overview Column
+export const OverviewCol = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;

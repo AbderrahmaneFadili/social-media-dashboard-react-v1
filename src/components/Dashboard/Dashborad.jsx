@@ -8,11 +8,19 @@ import {
   HeaderSubtitle,
   DashboardCards,
   ThemeTitle,
+  OverviewCards,
+  OverviewTitle,
+  OverviewCol,
 } from "./Dashboard.elements";
 
 import Toggle from "../Toggle/Toggle";
 import DashboardCard from "../DashboardCard/DashboardCard";
 import cards from "../../components/Dashboard/DashboardCards.data";
+import {
+  overviewCardsCol1,
+  overviewCardsCol2,
+} from "../../components/Dashboard/OverviewCards.data";
+import OverviewCard from "../OverviewCard/OverviewCard";
 
 const Dashborad = ({ theme, toggleTheme }) => {
   return (
@@ -42,6 +50,23 @@ const Dashborad = ({ theme, toggleTheme }) => {
             return <DashboardCard {...card} />;
           })}
         </DashboardCards>
+      </Container>
+
+      <Container>
+        <OverviewCards>
+          <OverviewTitle>Overview - Today</OverviewTitle>
+          <OverviewCol>
+            {overviewCardsCol1.map((overviewCard) => {
+              return <OverviewCard {...overviewCard} />;
+            })}
+          </OverviewCol>
+
+          <OverviewCol>
+            {overviewCardsCol2.map((overviewCard) => {
+              return <OverviewCard {...overviewCard} />;
+            })}
+          </OverviewCol>
+        </OverviewCards>
       </Container>
     </>
   );
