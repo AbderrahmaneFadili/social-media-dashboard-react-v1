@@ -46,8 +46,8 @@ const Dashborad = ({ theme, toggleTheme }) => {
       </HeaderWrapper>
       <Container>
         <DashboardCards>
-          {cards.map((card) => {
-            return <DashboardCard {...card} />;
+          {cards.map((card, i) => {
+            return <DashboardCard key={i.toString()} {...card} />;
           })}
         </DashboardCards>
       </Container>
@@ -56,14 +56,14 @@ const Dashborad = ({ theme, toggleTheme }) => {
         <OverviewCards>
           <OverviewTitle>Overview - Today</OverviewTitle>
           <OverviewCol>
-            {overviewCardsCol1.map((overviewCard) => {
-              return <OverviewCard {...overviewCard} />;
+            {overviewCardsCol1.map((overviewCard, i) => {
+              return <OverviewCard key={`${i}`} {...overviewCard} />;
             })}
           </OverviewCol>
 
           <OverviewCol>
-            {overviewCardsCol2.map((overviewCard) => {
-              return <OverviewCard {...overviewCard} />;
+            {overviewCardsCol2.map((overviewCard, i) => {
+              return <OverviewCard key={`${i}`} {...overviewCard} />;
             })}
           </OverviewCol>
         </OverviewCards>

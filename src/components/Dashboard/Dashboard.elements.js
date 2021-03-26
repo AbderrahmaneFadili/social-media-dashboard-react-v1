@@ -1,17 +1,20 @@
 import styled from "styled-components";
-import { colors } from "../../Themes/themes";
 
 //Container
 export const Container = styled.div`
   width: 100%;
   max-width: 88%;
   margin: 0 auto;
-  padding: 3rem 0 8rem;
+  padding: 3rem 0 4rem;
 `;
 
 export const HeaderWrapper = styled.div`
   background-color: ${({ theme }) => theme.topBackgroundPattern};
   border-radius: 0 0 1.5rem 1.5rem;
+
+  @media screen and (min-width: 768px) {
+    height: 300px;
+  }
 `;
 
 //Header
@@ -19,6 +22,7 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
   }
@@ -84,6 +88,10 @@ export const DashboardCards = styled.div`
   justify-content: space-between;
   position: relative;
   top: -8rem;
+
+  @media screen and (min-width: 768px) {
+    top: -10rem;
+  }
 `;
 
 //Overview Cards

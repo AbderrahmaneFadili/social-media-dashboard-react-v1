@@ -9,7 +9,7 @@ import {
 import { useTheme } from "styled-components";
 const Toggle = ({ toggleTheme }) => {
   const theme = useTheme();
-  console.log(theme);
+
   return (
     <ToggleContainer>
       <ToggleInput type="checkbox" onChange={toggleTheme} />
